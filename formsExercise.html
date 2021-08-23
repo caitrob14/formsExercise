@@ -15,18 +15,17 @@
             <legend>Customer Experience Survey</legend>
 
             <label for="storeNumber">Store Number</label>
-            <select id="storeNumber">
+            <select name= "store" id="storeNumber">
             <option hidden>Select a Store</option>
-                <option>3109</option>
-                <option>2421</option>
-                <option>5357</option>
-
+                <option value="3109">3109</option>
+                <option value= "2421">2421</option>
+                <option value= "5357">5357</option>
             </select>
 
             <fieldset>
                 <legend>When you visited:</legend>
                 <label for="visitdate">Date Visited</label>
-                <input type="date" name="visitdate" id="visitdate" value="2021-01-01" min="2021-01-01" max="2021-12-01">
+                <input type="date" name="visitdate" id="visitdate" value="2021-01-01" min="2021-01-01" max="2021-12-31">
             </br>
                 <label for="time">Time</label>
                 <input type="time" name="time" id="time">
@@ -60,8 +59,9 @@
             <label for="check">Please check the box if you would be willing to be contacted about your
                 experience</label>
             <br>
+            <!-- To reqire a requested format for Password (min and max for length will also work)-->
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" minlength="5" maxlength="10">
+            <input type="password" name="password" id="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length">
             <br>
             <input type="reset" name= "reset" id="reset">
             <br>
